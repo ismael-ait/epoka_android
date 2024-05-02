@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- TextView pour afficher le message de bienvenue -->
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Bouton pour ajouter une mission -->
+    <Button
+        android:id="@+id/buttonAjouterMission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="ajouter"
+        android:text="Ajouter une mission" />
+
+    <!-- Bouton pour quitter -->
+    <Button
+        android:id="@+id/buttonQuitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="quitter"
+        android:text="Quitter" />
+
+</LinearLayout>

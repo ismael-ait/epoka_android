@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Label "Nouvelle mission" -->
+    <TextView
+        android:id="@+id/textViewTitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nouvelle mission"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Champ de date "Du" -->
+    <TextView
+        android:id="@+id/textViewDu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Du :"
+        android:layout_below="@id/textViewTitre"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextDateDu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/textViewDu"
+        android:layout_below="@id/textViewTitre"
+        android:layout_marginTop="16dp"
+        android:inputType="date"/>
+
+    <!-- Champ de date "Au" -->
+    <TextView
+        android:id="@+id/textViewAu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Au :"
+        android:layout_below="@id/editTextDateDu"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextDateAu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/textViewAu"
+        android:layout_below="@id/editTextDateDu"
+        android:layout_marginTop="16dp"
+        android:inputType="date"/>
+
+    <!-- Champ "à" et liste déroulante -->
+    <TextView
+        android:id="@+id/textViewA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="À :"
+        android:layout_below="@id/editTextDateAu"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerLieu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/textViewA"
+        android:layout_below="@id/editTextDateAu"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Bouton pour enregistrer la mission -->
+    <Button
+        android:id="@+id/buttonSaveMission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerLieu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:onClick="insertMission"
+        android:text="Enregistrer Mission" />
+
+</RelativeLayout>
